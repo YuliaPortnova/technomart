@@ -16,7 +16,7 @@
     <div class="header-top">
       <div class="container header-top-container">
         <h1 class="header-title">
-          <span class="visualli-hidden">Техномарт.</span>
+          <span class="visually-hidden">Техномарт.</span>
           <span class="header-title-text">Интернет-магазин строительных материалов и инструментов для ремонта</span>
         </h1>
         <address class="header-address">
@@ -36,15 +36,16 @@
             <input class="header-search-input" type="search" name="search" placeholder="Поиск по сайту" required>
           </label>
         </form>
+        <!-- Если посетитель авторизован, переместите класс current c div.personal-account-login-wrapper на div.personal-account-active-->
         <!-- tabindex="0" добавлен для корректной работы в Safari -->
-        <div class="personal-account-login-wrapper" tabindex="0">
+        <div class="personal-account-login-wrapper current" tabindex="0">
           <!-- tabindex="-1" добавлен для корректной работы в Safari -->
           <button class="personal-account-login-button" type="button" tabindex="-1">Войти</button>
           <div class="personal-account-dropdown">
             <section class="personal-account-login personal-account-current">
               <h2 class="personal-account-login-title">Личный кабинет</h2>
               <button class="personal-account-login-close close-button">
-                <span class="visualli-hidden">Закрыть форму входа.</span>
+                <span class="visually-hidden">Закрыть форму входа.</span>
               </button>
               <form class="personal-account-form" action="https://echo.htmlacademy.ru/" method="post">
                 <label class="personal-account-label">
@@ -75,25 +76,62 @@
             <section class="personal-account-success">
               <h2 class="personal-account-success-title">Здравствуйте,<br>Равшан Джамшутович</h2>
               <button class="personal-account-success-close close-button">
-                <span class="visualli-hidden">Закрыть.</span>
+                <span class="visually-hidden">Закрыть.</span>
               </button>
               <a class="personal-account-success-link" href="#">Мои заказы</a>
               <a class="personal-account-success-link" href="#">Личный кабинет</a>
-              <button class="personal-account-success-go-out-button">Выйти</button>
+              <a class="personal-account-success-deauthorization" href="#">Выйти</a>
             </section>
           </div>
         </div>
         <div class="personal-account-active">
-          <p class="personal-account-name">Равшан Джамшутович</p>
-          <button class="personal-account-go-out" type="button">
-            <span class="visualli-hidden">Выйти.</span>
+          <a class="personal-account-profile" href="#">Равшан Джамшутович</a>
+          <a class="personal-account-deauthorization" href="#">
+            <span class="visually-hidden">Перейти на страницу деавторизации.</span>
           </button>
         </div>
       </div>
     </div>
     <div class="header-bottom">
       <div class="container header-bottom-container">
-
+        <nav class="main-navigation">
+          <ul class="main-navigation-list">
+            <li class="main-navigation-item">
+              <span class="main-navigation-link main-navigation-link-current">Главная</span>
+            </li>
+            <li class="main-navigation-item">
+              <a class="main-navigation-link" href="#">Компания</a>
+            </li>
+            <li class="main-navigation-item">
+              <a class="main-navigation-link" href="#">Каталог</a>
+            </li>
+            <li class="main-navigation-item">
+              <a class="main-navigation-link" href="#">Новости</a>
+            </li>
+            <li class="main-navigation-item">
+              <a class="main-navigation-link" href="#">Спецпредложения</a>
+            </li>
+            <li class="main-navigation-item">
+              <a class="main-navigation-link" href="#">Доставка</a>
+            </li>
+            <li class="main-navigation-item">
+              <a class="main-navigation-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="user-navigation">
+          <li class="user-navigation-item">
+            <a class="user-navigation-link" href="#" data-counter="">
+              <span class="visually-hidden">Избранное</span>
+            </a>
+          </li>
+          <li class="user-navigation-item">
+            <a class="user-navigation-link" href="#" data-counter="">
+              <span class="visually-hidden">Корзина</span>
+            </a>
+          </li>
+        </ul>
+        <a class="order-button" href="#">Оформить заказ</a>
       </div>
     </div>
   </header>
