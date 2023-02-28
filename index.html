@@ -88,7 +88,7 @@
           <a class="personal-account-profile" href="#">Равшан Джамшутович</a>
           <a class="personal-account-deauthorization" href="#">
             <span class="visually-hidden">Перейти на страницу деавторизации.</span>
-          </button>
+            </button>
         </div>
       </div>
     </div>
@@ -136,8 +136,107 @@
     </div>
   </header>
 
-  <main class="main-index main-container">
-    <h1 class="visually-hidden"></h1>
+  <main class="main-index">
+    <div class="hero">
+      <div class="container hero-wrapper">
+        <section class="catalog">
+          <h2 class="visually-hidden">Наши товары.</h2>
+          <ul class="catalog-list">
+            <li class="catalog-item catalog-item-materials new">
+              <h3 class="catalog-title">Материалы</h3>
+              <a class="catalog-link" href="#">на любой вкус</a>
+            </li>
+            <li class="catalog-item catalog-item-tool">
+              <h3 class="catalog-title">Инструмент</h3>
+              <a class="catalog-link" href="#">на все случаи</a>
+            </li>
+            <li class="catalog-item catalog-item-equipment">
+              <h3 class="catalog-title">Техника</h3>
+              <a class="catalog-link" href="#">для стройки</a>
+            </li>
+          </ul>
+        </section>
+        <section class="gallery">
+          <h2 class="visually-hidden">Популярные товары.</h2>
+          <ul class="gallery-list">
+            <!-- Для переключения слайдов добавьте класс gallery-item-current нужному gallery-item-->
+            <li class="gallery-item gallery-item-current">
+              <h3 class="gallery-subtitle">Дрели</h3>
+              <p class="gallery-text">Соседям на радость!</p>
+              <img class="gallery-image" src="" width="" height="" alt="Человек с дрелью.">
+            </li>
+            <li class="gallery-item">
+              <h3 class="gallery-subtitle">Перфораторы</h3>
+              <p class="gallery-text">Соседям на радость!</p>
+              <img class="gallery-image" src="" width="" height=""
+                alt="Человек работает инструментом из нашего магазина.">
+            </li>
+          </ul>
+          <div class="gallery-controls">
+            <button class="gallery-button gallery-prev" type="button">
+              <span class="visually-hidden">Предыдущий слайд.</span>
+            </button>
+            <button class="gallery-button gallery-next" type="button">
+              <span class="visually-hidden">Следующий слайд.</span>
+            </button>
+          </div>
+          <a class="gallery-button" href="#">Открыть каталог</a>
+          <ul class="gallery-pagination">
+            <li class="gallery-pagination-item">
+              <button class="gallery-pagination-button gallery-pagination-button-current" type="button">
+                <span class="visually-hidden">Слайд №1.</span>
+              </button>
+            </li>
+            <li class="gallery-pagination-item">
+              <button class="gallery-pagination-button" type="button">
+                <span class="visually-hidden">Слайд №2.</span>
+              </button>
+            </li>
+            <li class="gallery-pagination-item">
+              <button class="gallery-pagination-button" type="button">
+                <span class="visually-hidden">Слайд №3.</span>
+              </button>
+            </li>
+          </ul>
+        </section>
+        <section class="offers">
+          <h2 class="visually-hidden">Специальные предложения.</h2>
+          <ul class="offers-list">
+            <li class="offers-item offers-item-discounts">
+              <h3 class="offers-title">Cкидки 50%</h3>
+              <a class="offers-link" href="#">на 350 товаров</a>
+            </li>
+            <li class="offers-item offers-item-delivery">
+              <h3 class="offers-title">Доставка</h3>
+              <a class="offers-link" href="#">бесплатно</a>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <section class="products">
+      <div class="container products-wrapper">
+        <h2 class="products-title">Перфораторы</h2>
+        <form class="products-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset>
+            <legend>Цена</legend>
+            <div class="filter-range">
+              <div class="filter-range-scale">
+                <div class="filter-range-bar">
+                  <button class="price-toggle price-toggle-min" type="button">
+                    <span class="visually-hidden">Выберите минимальную цену.</span>
+                  </button>
+                  <button class="price-toggle price-toggle-max" type="button">
+                    <span class="visually-hidden">Выберите максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+
 
   </main>
 
