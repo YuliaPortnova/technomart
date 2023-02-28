@@ -1,48 +1,126 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style.css">
-    <title>Техномарт. Учебный проект.</title>
-    <meta name="description" content="Строительные материалы и инструменты для ремонта">
-    <!-- <link rel="icon" href="favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Техномарт. Учебный проект.</title>
+  <meta name="description" content="Строительные материалы и инструменты для ремонта">
+  <!-- <link rel="icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png"> -->
-  </head>
+</head>
 
-  <body>
-    <header class="page-header">
-      <div class="container">
-        <div class="page-header-wrapper">
-
-        </div>
+<body>
+  <header class="header">
+    <div class="header-top">
+      <div class="container header-top-container">
+        <h1 class="header-title">
+          <span class="visualli-hidden">Техномарт.</span>
+          <span class="header-title-text">Интернет-магазин строительных материалов и инструментов для ремонта</span>
+        </h1>
+        <address class="header-address">
+          <p class="header-address-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+          <a class="cheader-address-phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+        </address>
       </div>
-    </header>
-
-    <main class="main-index main-container">
-      <h1 class="visually-hidden"></h1>
-
-    </main>
-
-    <footer class="page-footer">
-      <div class="container">
-        <div class="page-footer-wrapper">
-
-        </div>
-      </div>
-    </footer>
-    <div class="modal-container modal-close">
-      <section class="modal modal-feedback">
-        <h2 class="modal-title title subtitle"></h2>
-        <button class="modal-close-button" type="button">
-          <span class="visually-hidden">Закрыть.</span>
-        </button>
-        <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
-
-        </form>
-      </section>
     </div>
-  </body>
+    <div class="header-middle">
+      <div class="container header-middle-container">
+        <a class="header-logo" href="#">
+          <img class="header-logo-image" src="" width="" height="" alt="Логотип интернет-магазина Техномарт.">
+        </a>
+        <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
+          <label class="header-search-wrapper">
+            <span class="header-search-label">Поиск:</span>
+            <input class="header-search-input" type="search" name="search" placeholder="Поиск по сайту" required>
+          </label>
+        </form>
+        <!-- tabindex="0" добавлен для корректной работы в Safari -->
+        <div class="personal-account-login-wrapper" tabindex="0">
+          <!-- tabindex="-1" добавлен для корректной работы в Safari -->
+          <button class="personal-account-login-button" type="button" tabindex="-1">Войти</button>
+          <div class="personal-account-dropdown">
+            <section class="personal-account-login personal-account-current">
+              <h2 class="personal-account-login-title">Личный кабинет</h2>
+              <button class="personal-account-login-close close-button">
+                <span class="visualli-hidden">Закрыть форму входа.</span>
+              </button>
+              <form class="personal-account-form" action="https://echo.htmlacademy.ru/" method="post">
+                <label class="personal-account-label">
+                  <span class="visually-hidden">Введите логин.</span>
+                  <input class="personal-account-login-input" type="text" name="login" placeholder="Логин" required>
+                </label>
+                <label class="personal-account-label">
+                  <span class="visually-hidden">Введите ваш пароль.</span>
+                  <input class="personal-account-password-input" type="password" name="password" placeholder="Пароль"
+                    required>
+                </label>
+                <div class="personal-account-wrapper">
+                  <label class="personal-account-checkbox">
+                    <input class="personal-account-checkbox-input visually-hidden" type="checkbox" name="keep-logged"
+                      checked>
+                    <span class="personal-account-control-mark"></span>
+                    <span class="personal-account-control-label">Запомнить меня</span>
+                  </label>
+                  <a class="personal-account-recover-password" href="#">Забыл пароль</a>
+                </div>
+                <div class="personal-account-buttons">
+                  <button class="personal-account-button" type="submit">Войти</button>
+                  <a class="personal-account-registration" href="#">Регистрация</a>
+                </div>
+              </form>
+            </section>
+            <!-- Для показа выпадающего блока с приветствием после успешной регистрации переместите класс personal-account-current с section.personal-account-login на section.personal-account-success -->
+            <section class="personal-account-success">
+              <h2 class="personal-account-success-title">Здравствуйте,<br>Равшан Джамшутович</h2>
+              <button class="personal-account-success-close close-button">
+                <span class="visualli-hidden">Закрыть.</span>
+              </button>
+              <a class="personal-account-success-link" href="#">Мои заказы</a>
+              <a class="personal-account-success-link" href="#">Личный кабинет</a>
+              <button class="personal-account-success-go-out-button">Выйти</button>
+            </section>
+          </div>
+        </div>
+        <div class="personal-account-active">
+          <p class="personal-account-name">Равшан Джамшутович</p>
+          <button class="personal-account-go-out" type="button">
+            <span class="visualli-hidden">Выйти.</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="header-bottom">
+      <div class="container header-bottom-container">
+
+      </div>
+    </div>
+  </header>
+
+  <main class="main-index main-container">
+    <h1 class="visually-hidden"></h1>
+
+  </main>
+
+  <footer class="page-footer">
+    <div class="container">
+      <div class="page-footer-wrapper">
+
+      </div>
+    </div>
+  </footer>
+  <div class="modal-container modal-close">
+    <section class="modal modal-feedback">
+      <h2 class="modal-title title subtitle"></h2>
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть.</span>
+      </button>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru/" method="post">
+
+      </form>
+    </section>
+  </div>
+</body>
 
 </html>
