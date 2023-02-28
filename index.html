@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles/style.css">
+  <!-- <link rel="stylesheet" href="styles/style.css"> -->
   <title>Техномарт. Учебный проект.</title>
   <meta name="description" content="Строительные материалы и инструменты для ремонта">
   <!-- <link rel="icon" href="favicon.ico">
@@ -121,12 +121,12 @@
         </nav>
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <a class="user-navigation-link" href="#" data-counter="">
+            <a class="user-navigation-link user-navigation-favorites" href="#" data-counter="">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="user-navigation-item">
-            <a class="user-navigation-link" href="#" data-counter="">
+            <a class="user-navigation-link user-navigation-cart" href="#" data-counter="">
               <span class="visually-hidden">Корзина</span>
             </a>
           </li>
@@ -169,7 +169,7 @@
               <h3 class="gallery-subtitle">Перфораторы</h3>
               <p class="gallery-text">Соседям на радость!</p>
               <img class="gallery-image" src="" width="" height=""
-                alt="Человек работает инструментом из нашего магазина.">
+                alt="Человек использует в работе инструмент, купленный в нашем магазине.">
             </li>
           </ul>
           <div class="gallery-controls">
@@ -217,9 +217,9 @@
     <section class="products">
       <div class="container products-wrapper">
         <h2 class="products-title">Перфораторы</h2>
-        <form class="products-form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset>
-            <legend>Цена</legend>
+        <form class="products-filter-form" action="https://echo.htmlacademy.ru/" method="post">
+          <fieldset class="filter-group">
+            <legend class="filter-title">Цена</legend>
             <div class="filter-range">
               <div class="filter-range-scale">
                 <div class="filter-range-bar">
@@ -231,11 +231,90 @@
                   </button>
                 </div>
               </div>
+              <div class="filter-range-inputs">
+                <label class="range-input-label">
+                  <span class="visually-hidden">Минимальная цена.</span>
+                  <input class="range-input range-input-min" type="number" name="range-min" value="0">
+                </label>
+                <span class="range-input-dash">-</span>
+                <label class="range-input-label">
+                  <span class="visually-hidden">Максимальная цена.</span>
+                  <input class="range-input range-input-max" type="number" name="range-max" value="30000">
+                </label>
+              </div>
             </div>
           </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-title">Производители</legend>
+            <ul class="filter-list">
+              <li class="filter-item filter-item-checkbox">
+                <label class="filter-control">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Bosch" checked>
+                  <span class="control-mark-checkbox"></span>
+                  <span class="control-label">BOSCH</span>
+                </label>
+                <label class="filter-control">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Interskol">
+                  <span class="control-mark-checkbox"></span>
+                  <span class="control-label">ИНТЕРСКОЛ</span>
+                </label>
+                <label class="filter-control">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Makita" checked>
+                  <span class="control-mark-checkbox"></span>
+                  <span class="control-label">MAKIta</span>
+                </label>
+                <label class="filter-control">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Dewalt">
+                  <span class="control-mark-checkbox"></span>
+                  <span class="control-label">Dewalt</span>
+                </label>
+                <label class="filter-control">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Hitachi">
+                  <span class="control-mark-checkbox"></span>
+                  <span class="control-label">Hitachi</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter-group">
+            <legend class="filter-title">Питание</legend>
+            <ul class="filter-list">
+              <li class="filter-item filter-item-radio">
+                <label class="filter-control">
+                  <input class="radio-input visually-hidden" type="radio" name="power" value="rechargeable" checked>
+                  <span class="control-mark-radio"></span>
+                  <span class="control-label">Аккумуляторные</span>
+                </label>
+              </li>
+              <li class="filter-item filter-item-radio">
+                <label class="filter-control">
+                  <input class="radio-input visually-hidden" type="radio" name="power" value="mains">
+                  <span class="control-mark-radio"></span>
+                  <span class="control-label">Сетевые</span>
+                </label>
+              </li>
+            </ul>
+            <button class="filter-button" type="submit">Показать</button>
+          </fieldset>
         </form>
+        <div class="products-right-column">
+          <select class="products-select" name="products">
+            <option value="">Сортировать</option>
+            <option value="price">по цене</option>
+            <option value="review">по отзывам</option>
+          </select>
+        </div>
+        <ul class="products-list">
+          <li class="product-item">
+            <img class="product-photo" src="" width="" height="" alt="">
+            <button class="product-button product-button-order" type="button">Купить</button>
+            <button class="product-button product-button-favorites" type="button">В закладки</button>
+            <h3 class="product-title">Перфоратор BOSCH BFG 3000</h3>
+            <a class="product-price" href="#">15500 ₽</a>
+          </li>
+        </ul>
       </div>
-    </div>
+      </div>
 
 
   </main>
