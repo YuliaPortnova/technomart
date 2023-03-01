@@ -59,18 +59,18 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  min-width: 1366px;
+  min-width: 1400px;
   min-height: 100%;
   margin: 0;
   font-family: "PT Sans", sans-serif;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
-  color: #2d3440;
+  font-size: 16px;
+  line-height: 24px;
+  color: #293449;
 }
 
 .container {
-  width: 1240px;
+  width: 1170px;
   margin: 0 auto;
   padding: 0 35px;
 }
@@ -80,15 +80,207 @@ body {
 }
 
 .button {
-  font-family: inherit;
   display: inline-flex;
   justify-content: center;
-  padding: 12px 32px;
+  font-family: inherit;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 20px;
+  font-size: 14px;
+  line-height: 18px;
   text-decoration: none;
-  border-radius: 26px;
+  border-radius: 4px;
   border: none;
   cursor: pointer;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.button-basic {
+  padding: 11px 10px;
+  color: #ffffff;
+  background-color: #63a63e;
+}
+
+.button-basic:hover {
+  background-color: #5fbb2d;
+}
+
+.button-basic:active {
+  background-color: #518534;
+}
+
+.button-additional {
+  padding: 9px 7px;
+  color: #32425C;
+  background-color: transparent;
+  border: 2px solid #63a63e;
+}
+
+.button-additional:hover {
+  color: #32425c;
+  border-color: #3d546f;
+}
+
+.button-additional:active {
+  color: #c5c5c5;
+  border-color: #c5c5c5;
+}
+
+.header {
+  background-color: #f3f7f9;
+}
+
+.header-top-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 11px 0 13px 0;
+}
+
+.header-title {
+  min-width: 490px;
+  margin: 0;
+}
+
+.header-title-text {
+  font-style: italic;
+  font-size: 14px;
+  line-height: 18px;
+  color: #EE3643;
+}
+
+.header-address {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  min-width: 399px;
+}
+
+.header-address-text {
+  min-width: 191px;
+  margin: 0;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 18px;
+  color: #32425C;
+}
+
+.header-address-phone {
+  display: block;
+  min-width: 188px;
+  padding-left: 24px;
+  font-style: normal;
+  font-weight: 700;
+  color: #293449;
+  background-image: url("../images/icons/phone-icon.svg");
+  background-repeat: no-repeat;
+  background-position: left;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.header-middle {
+  color: #ffffff;
+  background-color: #293449;
+}
+
+.header-middle-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 45px;
+  color: #ffffff;
+  background-color: #ee3643;
+  box-shadow: 0 5px 0 0 #b52933;
+}
+
+.header-search {
+  flex-grow: 1;
+  min-width: 600px;
+}
+
+.header-search-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.header-search-icon {
+  opacity: 0.3;
+  color: #dadada;
+}
+
+.header-search-input {
+  flex-grow: 1;
+}
+
+.personal-account-login-wrapper {
+  display: none;
+  position: relative;
+}
+
+.personal-account-login-wrapper.current {
+  display: flex;
+}
+
+.personal-account-login-button {
+  font-weight: 700;
+  font-size: 14px;
+  color: #f1f5f7;
+  background-color: transparent;
+  border: none;
+  line-height: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.personal-account-dropdown {
+  display: none;
+  position: absolute;
+  width: 360px;
+  color: #000000;
+  background-color: #ffffff;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 2px;
+}
+
+.personal-account-login-wrapper:focus-within .personal-account-current {
+  display: block;
+}
+
+.personal-account-active {
+  display: none;
+}
+
+.personal-account-active.current {
+  display: flex;
+}
+
+.personal-account-login-title {
+  margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.personal-account-control-label {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.personal-account-recover-password {
+  font-size: 14px;
+  line-height: 18px;
+}
+
+
+.footer {
+  margin-top: auto;
 }
