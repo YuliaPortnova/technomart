@@ -79,6 +79,15 @@ body {
   flex-grow: 1;
 }
 
+.title {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+  color: #293449;
+}
+
 .button {
   display: inline-flex;
   justify-content: center;
@@ -94,18 +103,32 @@ body {
   text-transform: uppercase;
 }
 
-.button-basic {
+.button-green {
   padding: 11px 10px;
   color: #ffffff;
   background-color: #63a63e;
 }
 
-.button-basic:hover {
+.button-green:hover {
   background-color: #5fbb2d;
 }
 
-.button-basic:active {
+.button-green:active {
   background-color: #518534;
+}
+
+.button-red {
+  padding: 13px;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+.button-green:hover {
+  background-color: #ca2c37;
+}
+
+.button-green:active {
+  background-color: #ba2732;
 }
 
 .button-additional {
@@ -422,26 +445,445 @@ body {
   padding-top: 52px;
 }
 
+.hero {
+  margin-bottom: 50px;
+}
+
+.catalog {
+  margin-bottom: 27px;
+}
+
 .catalog-list {
   display: grid;
   grid-template-columns: 370px 370px 370px;
   gap: 30px;
+}
+
+.hero-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+.hero-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 135px 33px 25px;
+  background-repeat: no-repeat;
+  background-position: right 37px top 45px;
+  overflow: hidden;
+}
+
+.hero-item.new::before {
+  position: absolute;
+  top: 8px;
+  right: -28px;
+  content: "new";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #ee3643;
+  transform: rotate(45deg);
+  z-index: 1;
+}
+
 .catalog-item-materials {
   background-color: #ffbf47;
+  background-image: url("../images/catalog-materials.svg");
 }
 
 .catalog-item-tool {
   background-color: #3bbce3;
+  background-image: url("../images/catalog-tool.svg");
 }
 
 .catalog-item-equipment {
   background-color: #dc91d8;
+  background-image: url("../images/catalog-equipment.svg");
 }
+
+.hero-title {
+  margin: 0 0 57px 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-link {
+  width: 180px;
+  margin-top: auto;
+  padding: 8px 11px 11px 6px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid #ffffff;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.hero-link::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  background-image: url(../images/icons/arrow-icon.svg);
+  background-position: center top 3px;
+  background-repeat: no-repeat;
+}
+
+.hero-link:hover {
+  opacity: 0.6;
+}
+
+.hero-link:active {
+  opacity: 0.3;
+}
+
+.gallery-offers-wrapper {
+  display: grid;
+  grid-template-columns: 770px 370px;
+  gap: 30px;
+  align-items: start;
+}
+
+.gallery {
+  position: relative;
+  color: #ffffff;
+  background-color: #3d546f;
+}
+
+.gallery-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.gallery-item {
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  position: relative;
+  min-height: 390px;
+  padding: 50px 500px 40px 50px;
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item-current {
+  display: flex;
+}
+
+.gallery-subtitle {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 5px 0;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-transform: uppercase;
+}
+
+.gallery-text {
+  position: relative;
+  margin: 0 0 0 0;
+  z-index: 1;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.gallery-text:last-of-type {
+  margin-bottom: auto;
+}
+
+.gallery-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gallery-link {
+  position: relative;
+  z-index: 1;
+  margin-top: 130px;
+  padding: 13px 23px 14px 23px;
+}
+
+.gallery-controls {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+  bottom: 160px;
+  left: 20px;
+  right: 20px;
+}
+
+.gallery-button {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(41, 52, 73, 0.6);
+  background-image: url(../images/icons/arrow-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 50%;
+}
+
+.gallery-prev {
+  transform: rotate(180deg);
+}
+
+.gallery-button:hover {
+  opacity: 0.6;
+}
+
+.gallery-button:active {
+  opacity: 0.3;
+}
+
+.gallery-pagination {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 700px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.gallery-pagination-button {
+  width: 8px;
+  height: 8px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(255, 209, 128, 0.8);
+}
+
+.gallery-pagination-button-current {
+  background-color: #ffffff;
+}
+
+.offers-list {
+  display: grid;
+  grid-template-columns: 370px;
+  gap: 29px;
+}
+
+.offers-item-discounts {
+  background-color: #8ed78f;
+  background-image: url("../images/offers-discounts.svg");
+}
+
+.offers-item-delivery {
+  background-color: #ffbf47;
+  background-image: url("../images/offers-delivery.svg");
+}
+
+.products-title {
+  margin: 0 0 26px 0;
+}
+
+.products-content {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 79px;
+}
+
+.filter-group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.filter-group-price {
+  margin-bottom: 40px;
+}
+
+.filter-title {
+  padding: 0;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.filter-title-price {
+  margin-bottom: 8px;
+}
+
+.filter-range {
+  width: 220px;
+  padding: 19px 20px;
+  margin-bottom: 7px;
+  background-color: #f7f3ec;
+  border-radius: 2px;
+}
+
+.filter-range-scale {
+  position: relative;
+  width: 100%;
+  height: 2px;
+  background-color: #3d546f;
+}
+
+.filter-range-bar {
+  position: absolute;
+  top: 0;
+  left: 9px;
+  width: 71px;
+  height: 2px;
+  background-color: #5fbb2d;
+}
+
+.price-toggle {
+  position: absolute;
+  top: -10px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 2px solid #3d546f;
+  border-radius: 50%;
+}
+
+.price-toggle-min {
+  left: -10px;
+}
+
+.price-toggle-max {
+  right: -10px;
+}
+
+.filter-price-inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.price-input {
+  display: inline-flex;
+  width: 95px;
+  padding: 11px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  color: #293449;
+  background-color: #f7f3ec;
+  border: none;
+  border-radius: 2px;
+  -webkit-appearance: none;
+          appearance: none;
+  -moz-appearance: textfield;
+}
+
+.price-input::-webkit-outer-spin-button,
+.price-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+  margin: 0;
+}
+
+.price-input-dash {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.filter-group-companies {
+  margin-bottom: 44px;
+}
+
+.filter-title-companies {
+  margin-bottom: 12px;
+}
+
+.filter-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.filter-item:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.control-mark-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 21px;
+  height: 21px;
+  margin-right: 11px;
+  color: #ffffff;
+  border: 2px solid #3d546f;
+  border-radius: 2px;
+}
+
+.control-label {
+  font-size: 14px;
+  line-height: 18px;
+  color: #000000;
+}
+
+.checkbox-input:checked + .control-mark-checkbox {
+  color: #3d546f;
+}
+
+.filter-control:hover .control-mark-checkbox {
+  border-color: rgba(50, 66, 92, 0.6);
+}
+
+.filter-control:hover .checkbox-input:checked + .control-mark-checkbox {
+  color: rgba(50, 66, 92, 0.6);
+}
+
+.checkbox-input:active + .control-mark-checkbox {
+  border-color:  rgba(50, 66, 92, 0.2);
+}
+
+.checkbox-input:active.checkbox-input:checked + .control-mark-checkbox {
+  color: rgba(50, 66, 92, 0.2);
+}
+
+.checkbox-input:active ~ .control-label {
+  opacity: 0.4;
+}
+
+.filter-group-power {
+  margin-right: 5px;
+}
+
+
 
 
 
