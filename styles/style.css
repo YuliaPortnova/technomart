@@ -654,6 +654,7 @@ body {
   background-position: center;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .gallery-prev {
@@ -774,6 +775,7 @@ body {
   background-color: #ffffff;
   border: 2px solid #3d546f;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .price-toggle-min {
@@ -783,6 +785,15 @@ body {
 .price-toggle-max {
   right: -10px;
 }
+
+.price-toggle:hover {
+  background-color: #518534;
+}
+
+.price-toggle:active {
+  background-color: #5fbb2d;
+}
+
 
 .filter-price-inputs {
   display: flex;
@@ -805,6 +816,10 @@ body {
   -moz-appearance: textfield;
 }
 
+.price-input:hover {
+  background-color: #ffd180;
+}
+
 .price-input::-webkit-outer-spin-button,
 .price-input::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -824,7 +839,7 @@ body {
 }
 
 .filter-title-companies {
-  margin-bottom: 12px;
+  margin-bottom: 16px;
 }
 
 .filter-list {
@@ -834,7 +849,13 @@ body {
 }
 
 .filter-item:not(:last-child) {
-  margin-bottom: 15px;
+  margin-bottom: 19px;
+}
+
+.filter-control {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .control-mark-checkbox {
@@ -843,16 +864,19 @@ body {
   align-items: center;
   width: 21px;
   height: 21px;
-  margin-right: 11px;
   color: #ffffff;
   border: 2px solid #3d546f;
   border-radius: 2px;
+  cursor: pointer;
 }
 
 .control-label {
+  max-width: 184px;
+  padding-left: 15px;
   font-size: 14px;
   line-height: 18px;
   color: #000000;
+  cursor: pointer;
 }
 
 .checkbox-input:checked + .control-mark-checkbox {
@@ -867,22 +891,100 @@ body {
   color: rgba(50, 66, 92, 0.6);
 }
 
-.checkbox-input:active + .control-mark-checkbox {
+.checkbox-input:disabled + .control-mark-checkbox {
   border-color:  rgba(50, 66, 92, 0.2);
+  cursor: auto;
 }
 
-.checkbox-input:active.checkbox-input:checked + .control-mark-checkbox {
+.checkbox-input:disabled.checkbox-input:checked + .control-mark-checkbox {
   color: rgba(50, 66, 92, 0.2);
 }
 
-.checkbox-input:active ~ .control-label {
+.checkbox-input:disabled ~ .control-label {
   opacity: 0.4;
+  cursor: auto;
 }
 
 .filter-group-power {
-  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 45px;
 }
 
+.filter-title-power {
+  margin-bottom: 18px;
+}
+
+.control-mark-radio {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #3d546f;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radio-input + .control-mark-radio::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: transparent;
+  border-radius: 50%;
+}
+
+.radio-input:checked + .control-mark-radio::before {
+  background-color: #3d546f;
+}
+
+/* Нет состояния hover для радиокнопок, так как в макете явно указано, что при наведении элемент не изменяется */
+
+.radio-input:disabled ~ .control-label {
+  opacity: 0.4;
+  cursor: auto;
+}
+
+.radio-input:disabled + .control-mark-radio {
+  cursor: auto;
+}
+
+.filter-button {
+  width: 100%;
+  border-color: #3d546f;
+  border-radius: 2px;
+}
+
+.filter-button:hover {
+  opacity: 0.6;
+}
+
+.products-select {
+  min-width: 280px;
+  padding: 8px 30px 8px 16px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  color: #293449;
+  background-color: transparent;
+  border: 1px solid #3d546f;
+  border-radius: 2px;
+  appearance: none;
+  background-image: url("../images/icons/arrow-down-icon.svg");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.products-select:hover {
+  border-color: #63a63e;
+}
+
+.products-select:focus {
+  outline: 1px solid #ffbf47;
+  border-color: #63a63e;
+  background-image: url("../images/icons/arrow-green-icon.svg"),
+                    url("../images/icons/pointer-icon.svg");
+  background-position: right 12px center, right -2px top 14px;
+}
 
 
 
