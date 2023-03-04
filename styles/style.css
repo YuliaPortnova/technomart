@@ -123,11 +123,11 @@ body {
   background-color: #ee3643;
 }
 
-.button-green:hover {
+.button-red:hover {
   background-color: #ca2c37;
 }
 
-.button-green:active {
+.button-red:active {
   background-color: #ba2732;
 }
 
@@ -821,7 +821,7 @@ body {
 }
 
 .price-input:hover {
-  background-color: #ffd180;
+  outline: 2px solid #63a63e;
 }
 
 .price-input::-webkit-outer-spin-button,
@@ -891,6 +891,26 @@ body {
   border-color: rgba(50, 66, 92, 0.6);
 }
 
+.checkbox-input:focus-visible + .control-mark-checkbox {
+  border-color: #63a63e;
+}
+
+@supports not selector(:focus-visible) {
+  .checkbox-input:focus + .control-mark-checkbox {
+    border-color: #63a63e;
+  }
+}
+
+.checkbox-input:checked:focus-visible + .control-mark-checkbox {
+  color: #63a63e;
+}
+
+@supports not selector(:focus-visible) {
+  .checkbox-input:checked:focus + .control-mark-checkbox {
+    color: #63a63e;
+  }
+}
+
 .filter-control:hover .checkbox-input:checked + .control-mark-checkbox {
   color: rgba(50, 66, 92, 0.6);
 }
@@ -942,6 +962,26 @@ body {
 }
 
 /* Нет состояния hover для радиокнопок, так как в макете явно указано, что при наведении элемент не изменяется */
+
+.radio-input:focus-visible + .control-mark-radio {
+  border-color: #63a63e;
+}
+
+@supports not selector(:focus-visible) {
+  .radio-input:focus + .control-mark-radio {
+    border-color: #63a63e;
+  }
+}
+
+.radio-input:checked:focus-visible + .control-mark-radio::before {
+  background-color: #63a63e;
+}
+
+@supports not selector(:focus-visible) {
+  .radio-input:checked:focus + .control-mark-radio::before {
+    background-color: #63a63e;
+  }
+}
 
 .radio-input:disabled ~ .control-label {
   opacity: 0.4;
@@ -1290,15 +1330,61 @@ body {
   margin-bottom: 5px;
 }
 
+.about-us-contacts-wrapper {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 169px;
+  padding-top: 52px;
+  padding-bottom: 49px;
+}
 
+.about-us-title {
+  margin: 0 0 23px 0;
+}
 
+.about-us-text {
+  margin: 0 0 25px 0;
+}
 
+.about-us-text:last-of-type {
+  margin: 0 0 51px 0;
+}
 
+.about-us-button {
+  min-width: 195px;
+  border-radius: 2px;
+}
 
+.contacts-title {
+  margin: 0 0 23px 0;
+}
 
+.contacts-text {
+  margin: 0 0 25px 0;
+}
 
+.contacts-text:last-of-type {
+  margin: 0 0 31px 0;
+}
 
+.contacts-map-link {
+  display: inline-flex;
+  margin-bottom: 30px;
+}
+
+.contacts-map-link:last-of-type {
+  margin-bottom: 0;
+}
+
+.contacts-map-link:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.contacts-map-link:active {
+  opacity: 0.6;
+}
 
 .footer {
   margin-top: auto;
+  background-color: #32425c;;
 }
