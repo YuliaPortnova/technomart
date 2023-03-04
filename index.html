@@ -33,13 +33,15 @@
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
           <label class="header-search-wrapper">
-            <svg class="header-search-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
-              width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd"
-                d="M8 16a8 8 0 1 1 6.32-3.094l5.387 5.387-1.414 1.414-5.387-5.387A7.965 7.965 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"
-                clip-rule="evenodd" />
-            </svg>
-            <span class="header-search-label">Поиск:</span>
+            <span class="header-search-label">
+              <svg class="header-search-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
+                width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd"
+                  d="M8 16a8 8 0 1 1 6.32-3.094l5.387 5.387-1.414 1.414-5.387-5.387A7.965 7.965 0 0 1 8 16Zm6-8A6 6 0 1 1 2 8a6 6 0 0 1 12 0Z"
+                  clip-rule="evenodd" />
+              </svg>
+              <span class="header-search-label-text">Поиск:</span>
+            </span>
             <input class="header-search-input" type="search" name="search" placeholder="Поиск по сайту" required>
           </label>
         </form>
@@ -247,7 +249,7 @@
               <div class="filter-price-inputs">
                 <label class="price-input-label">
                   <span class="visually-hidden">Минимальная цена.</span>
-                  <input class="price-input price-input-min input" type="number" name="price-min" value="0">
+                  <input class="price-input price-input-min" type="number" name="price-min" value="0">
                 </label>
                 <span class="price-input-dash">—</span>
                 <label class="price-input-label">
@@ -543,7 +545,8 @@
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="subscribe-label">
                 <span class="visually-hidden">Ваша электронная почта.</span>
-                <input class="subscribe-input input" type="email" name="email" placeholder="email@example.com" required>
+                <!-- Для вывода состояния "Ошибка" добавьте тегу input класс error -->
+                <input class="subscribe-input" type="email" name="email" placeholder="email@example.com" required>
               </label>
               <button class="subscribe-button" type="submit">
                 <span class="visually-hidden">Отправить</span>
