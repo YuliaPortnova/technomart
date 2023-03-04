@@ -148,6 +148,56 @@ body {
   border-color: #c5c5c5;
 }
 
+.input {
+  padding: 6px 8px 10px 8px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  color: #556981;
+  border: 1px solid #3d546f;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.input::placeholder {
+  color: #cccccc;
+  opacity: 1;
+}
+
+.input:hover {
+  border-color: #63a63e;
+  color: #293449;
+}
+
+.input:focus {
+  border-color: #ffbf47;
+  outline: none;
+  box-shadow: inset 0 0 0 1px #63a63e;
+}
+
+.input.error {
+  color: #293449;
+  border-color: #ee3643;
+}
+
+.input.error:hover {
+  color: #000000;
+  border-color: #ee3643;
+  box-shadow: inset 0 0 0 1px #ee3643;
+}
+
+.input.error:focus {
+  box-shadow: inset 0 0 0 1px #ee3643;
+}
+
+.input[disabled] {
+  pointer-events: none;
+  color: #808080;
+  background-color: rgba(241, 245, 247, 0.5);
+  border-color: #C5C5C5;
+  box-shadow: none;
+}
+
 .header {
   background-color: #f3f7f9;
 }
@@ -215,7 +265,7 @@ body {
   flex-wrap: wrap;
 }
 
-.header-logo {
+.logo-technomart-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -225,6 +275,14 @@ body {
   background-color: #ee3643;
   box-shadow: 0 5px 0 0 #b52933;
   z-index: 1;
+}
+
+.logo-technomart-link:hover {
+  background-color: #ca2c37;
+}
+
+.logo-technomart-link:active {
+  background-color: #ba2732;
 }
 
 .header-search {
@@ -1228,6 +1286,14 @@ body {
   text-decoration: none;
 }
 
+.pagination-link:hover {
+  opacity: 0.7;
+}
+
+.pagination-link:active{
+  opacity: 0.3;
+}
+
 .pagination-link-current {
   color: #3d546f;
   background-color: transparent;
@@ -1335,7 +1401,7 @@ body {
   grid-template-columns: 500px 500px;
   gap: 169px;
   padding-top: 52px;
-  padding-bottom: 49px;
+  padding-bottom: 42px;
 }
 
 .about-us-title {
@@ -1386,5 +1452,205 @@ body {
 
 .footer {
   margin-top: auto;
-  background-color: #32425c;;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.footer-top-wrapper {
+  display: grid;
+  grid-template-columns: 500px 500px;
+  gap: 169px;
+  padding-bottom: 33px;
+}
+
+.footer-logo {
+  height: 50px;
+  margin: 0 0 26px 0;
+}
+
+.footer-address {
+  font-style: normal;
+  margin-bottom: 21px;
+}
+
+.footer-address-text {
+  margin: 0 0 3px 0;
+  color: #f3f7f9;
+}
+
+.footer-address-phone {
+  color: #f3f7f9;
+  text-decoration: none;
+}
+
+.footer-address-phone:hover {
+  opacity: 0.6;
+}
+
+.footer-address-phone:active {
+  opacity: 0.3;
+}
+
+.footer-socials-list {
+  display: flex;
+  gap: 7px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.socials-link {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  background-color: rgba(255, 255, 255, 0.1);
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.socials-pin {
+  background-image: url("../images/icons/pin-icon.svg");
+}
+
+.socials-vk {
+  background-image: url("../images/icons/vk-icon.svg");
+}
+
+.socials-vsco {
+  background-image: url("../images/icons/vsco-icon.svg");
+}
+
+.socials-link:hover {
+  background-color: #293449;
+}
+
+.socials-link:active {
+  opacity: 0.3;
+}
+
+.footer-right-column {
+  padding-top: 15px;
+  justify-self: end;
+}
+
+.feedback {
+  margin-bottom: 29px;
+  font-style: normal;
+  text-align: right;
+}
+
+.feedback-title {
+  margin: 0 0 2px 0;
+}
+
+.feedback-email {
+  display: inline-flex;
+  color: #ffd180;
+  text-decoration: none;
+}
+
+.feedback-email:not(:last-of-type) {
+  margin-bottom: 5px;
+}
+
+.feedback-email:hover {
+  color: #ffbf47;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.feedback-email:active {
+  opacity: 0.3;
+}
+
+.subscribe {
+  text-align: right;
+}
+
+.subscribe-title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  border: 1px solid #63a63e;
+  border-radius: 2px;
+}
+
+.subscribe-input {
+  width: 218px;
+  padding: 11px 16px 12px 16px;
+  border: none;
+  background-color: transparent;
+}
+
+.subscribe-button {
+  width: 40px;
+  height: 40px;
+  margin: -1px;
+  padding: 0;
+  background-color: #63a63e;
+  background-image: url("../images/icons/cart-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.subscribe-button:hover {
+  background-color: #5fbb2d;
+}
+
+.subscribe-button:active {
+  background-color: #518534;
+}
+
+.footer-bottom {
+  background-color: #293449;
+}
+
+.footer-bottom-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+
+.copyright-technomart {
+  min-width: 380px;
+  margin: 0;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.copyright-htmlacademy {
+  min-width: 200px;
+  margin: 0 0 0 auto;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.copyright-htmlacademy-link {
+  color: #ffd180;
+  text-decoration: none;
+}
+
+.copyright-htmlacademy-link:hover {
+  color: #ffbf47;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.copyright-htmlacademy-link:active {
+  opacity: 0.3;
 }
