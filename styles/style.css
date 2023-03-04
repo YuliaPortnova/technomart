@@ -257,6 +257,24 @@ body {
   letter-spacing: 2px;
 }
 
+.header-address-phone:hover {
+  opacity: 0.6;
+}
+
+.header-address-phone:active {
+  opacity: 0.3;
+}
+
+.header-address-phone:focus-visible {
+  outline: 1px solid #63a63e;
+}
+
+@supports not selector(:focus-visible) {
+  .header-address-phone:focus {
+    outline: 1px solid #63a63e;
+  }
+}
+
 .header-middle {
   color: #ffffff;
   background-color: #293449;
@@ -316,17 +334,22 @@ body {
 .header-search-input {
   width: 300px;
   border: none;
-  padding: 0;
+  padding: 10px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 24px;
+  color: #3d546f;
   background-color: #293449;
 }
 
 .header-search-input::placeholder {
   opacity: 0;
+  font-family: 'PT Sans';
+  color: #c5c5c5;
 }
 
-.header-search-wrapper:focus-within .header-search-label {
-  opacity: 0.2;
-  background-color: #b52933;
+.header-search-wrapper:focus-within .header-search-label-text {
+  display: none;
 }
 
 .header-search-wrapper:focus-within .header-search-input {
