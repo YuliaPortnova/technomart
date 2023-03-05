@@ -33,6 +33,7 @@
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
           <label class="header-search-wrapper">
+            <input class="header-search-input" type="search" name="search" placeholder="&#32;Поиск по сайту" required>
             <span class="header-search-label">
               <svg class="header-search-icon" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
                 width="20" height="20" fill="currentColor" viewBox="0 0 20 20">
@@ -42,7 +43,6 @@
               </svg>
               <span class="header-search-label-text">Поиск:</span>
             </span>
-            <input class="header-search-input" type="search" name="search" placeholder="&#32;Поиск по сайту" required>
           </label>
         </form>
         <!-- Если посетитель авторизован, переместите класс current c div.personal-account-login-wrapper на div.personal-account-active-->
@@ -68,11 +68,15 @@
                   required>
               </label>
               <div class="personal-account-wrapper">
-                <label class="personal-account-checkbox">
-                  <input class="personal-account-checkbox-input visually-hidden" type="checkbox" name="keep-logged"
+                <label class="personal-account-checkbox filter-control">
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="keep-logged"
                     checked>
-                  <span class="personal-account-control-mark"></span>
-                  <span class="personal-account-control-label">Запомнить меня</span>
+                    <span class="control-mark-checkbox">
+                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z"/>
+                      </svg>
+                    </span>
+                  <span class="control-label">Запомнить меня</span>
                 </label>
                 <a class="personal-account-recover-password" href="#">Забыл пароль</a>
               </div>
@@ -130,12 +134,12 @@
         </nav>
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <a class="user-navigation-link user-navigation-favorites" href="#" data-counter="">
+            <a class="user-navigation-link user-navigation-favorites" href="#" data-favorites-counter="12">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="user-navigation-item">
-            <a class="user-navigation-link user-navigation-cart" href="#" data-counter="">
+            <a class="user-navigation-link user-navigation-cart" href="#" data-cart-counter="3">
               <span class="visually-hidden">Корзина</span>
             </a>
           </li>

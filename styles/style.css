@@ -149,6 +149,7 @@ body {
 }
 
 .input {
+  width: 100%;
   padding: 6px 8px 10px 8px;
   font-family: inherit;
   font-size: 16px;
@@ -207,13 +208,14 @@ body {
   flex-wrap: wrap;
   gap: 30px;
   padding-top: 11px;
-  padding-bottom: 13px;
+  padding-bottom: 14px;
 }
 
 .header-title {
   min-width: 490px;
   margin: 0 0 0 2px;
   font-size: inherit;
+  font-weight: 400;
   line-height: 18px;
 }
 
@@ -283,6 +285,7 @@ body {
 .header-middle-wrapper {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .logo-technomart-link {
@@ -311,6 +314,7 @@ body {
 }
 
 .header-search-wrapper {
+  position: relative;
   display: flex;
   width: 100%;
   height: 100%;
@@ -323,18 +327,21 @@ body {
 }
 
 .header-search-label {
+  order: -1;
   padding: 13px 12px 7px 21px;
   flex-grow: 1;
 }
 
 .header-search-label-text {
-  vertical-align: top;
+  position: absolute;
+  top: 13px;
+  left: 53px;
 }
 
 .header-search-input {
-  width: 300px;
+  width: 700px;
   border: none;
-  padding: 10px;
+  padding: 6px;
   font-family: inherit;
   font-size: 16px;
   line-height: 24px;
@@ -342,10 +349,22 @@ body {
   background-color: #293449;
 }
 
+.header-search-input::-webkit-search-decoration,
+.header-search-input::-webkit-search-cancel-button,
+.header-search-input::-webkit-search-results-button,
+.header-search-input::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
 .header-search-input::placeholder {
   opacity: 0;
   font-family: 'PT Sans';
   color: #c5c5c5;
+}
+
+.header-search-wrapper:focus-within {
+  background-color: #f1f5f7;
 }
 
 .header-search-wrapper:focus-within .header-search-label-text {
@@ -355,8 +374,13 @@ body {
 .header-search-wrapper:focus-within .header-search-input {
   width: 100%;
   flex-grow: 1;
-  background-color: #f1f5f7;
   outline: none;
+  background-color: #f1f5f7;
+}
+
+.header-search-input:not(:placeholder-shown) {
+  flex-grow: 1;
+  background-color: #f1f5f7;
 }
 
 .header-search-wrapper:focus-within .header-search-input::placeholder {
@@ -364,9 +388,12 @@ body {
 }
 
 .personal-account-login-wrapper {
+  flex-wrap: wrap;
+  gap: 30px 20px;
+  max-width: 330px;
   display: none;
   position: relative;
-  padding-left: 18px;
+  padding: 15px 1px 13px 18px;
 }
 
 .personal-account-login-wrapper.current {
@@ -374,6 +401,8 @@ body {
 }
 
 .personal-account-login-button {
+  display: inline-flex;
+  gap: 12px;
   padding: 0;
   font-family: inherit;
   font-weight: 700;
@@ -388,10 +417,10 @@ body {
 
 .personal-account-login-button::before {
   display: inline-flex;
+  flex-shrink: 0;
   content: "";
   width: 16px;
   height: 16px;
-  margin-right: 12px;
   vertical-align: bottom;
   background-image: url("../images/icons/enter-icon.svg");
   background-position: center;
@@ -401,11 +430,14 @@ body {
 .personal-account-dropdown {
   display: none;
   position: absolute;
+  top: 13px;
+  right: 3px;
   width: 360px;
   color: #000000;
   background-color: #ffffff;
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
+  z-index: 2;
 }
 
 .personal-account-login-wrapper:focus-within .personal-account-current {
@@ -420,22 +452,103 @@ body {
   display: flex;
 }
 
+.personal-account-login {
+  padding: 22px 29px 35px 26px;
+}
+
 .personal-account-title {
-  margin: 0;
+  width: 285px;
+  margin: 0 0 43px 0;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
   text-transform: uppercase;
 }
 
-.personal-account-control-label {
-  font-size: 14px;
-  line-height: 18px;
+.close-button {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  background-image: url("../images/icons/close-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+}
+
+.close-button:hover {
+  opacity: 0.7;
+}
+
+.close-button:focus {
+  opacity: 0.3;
+}
+
+.personal-account-form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.personal-account-label {
+  width: 100%;
+  margin: 0 0 7px 0;
+}
+
+.personal-account-label:last-of-type {
+  margin-bottom: 12px;
+}
+
+.personal-account-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px;
+  margin-bottom: 38px;
+}
+
+.personal-account-checkbox {
+  width: 149px;
+}
+
+.personal-account-checkbox .control-label {
+  max-width: 120px;
+  padding-left: 18px;
 }
 
 .personal-account-recover-password {
+  color: #000000;
+  max-width: 138px;
   font-size: 14px;
   line-height: 18px;
+  text-decoration: none;
+}
+
+.personal-account-recover-password:hover {
+  color: #556981;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+.personal-account-recover-password:active {
+  opacity: 0.3;
+}
+
+.personal-account-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  align-items: flex-start;
+}
+
+.personal-account-button {
+  width: 145px;
+}
+
+.personal-account-registration {
+  width: 145px;
 }
 
 .personal-account-success-link {
@@ -501,7 +614,7 @@ body {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 21px 22px 24px 26px;
+  padding: 19px 21px 26px 25px;
   color: #ffffff;
   text-decoration: none;
 }
@@ -519,31 +632,58 @@ body {
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 22px;
+  justify-content: flex-end;
   min-width: 120px;
-  margin: 0;
-  padding: 0;
+  max-width: 196px;
+  margin: 0 0 0 auto;
+  padding: 20px 28px;
   list-style-type: none;
 }
 
 .user-navigation-link {
-  display: inline-block;
+  display: inline-flex;
+}
+
+.user-navigation-link::before {
+  content: "";
   width: 18px;
   height: 18px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.user-navigation-favorites {
+.user-navigation-favorites::before {
   background-image: url("../images/icons/favorites-icon.svg");
 }
 
-.user-navigation-cart {
+.user-navigation-cart::before {
   background-image: url("../images/icons/cart-icon.svg");
+}
+
+.user-navigation-link:after {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 18px;
+  color: #FFFFFF;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.user-navigation-favorites:after {
+  content: attr(data-favorites-counter);
+  padding-left: 8px;
+}
+
+.user-navigation-cart:after {
+  content: attr(data-cart-counter);
+  padding-left: 6px;
 }
 
 .order-button {
   width: 170px;
+  margin: 10px 4px 0 0;
 }
 
 .main-index {
