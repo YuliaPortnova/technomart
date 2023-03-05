@@ -150,7 +150,7 @@ body {
 
 .input {
   width: 100%;
-  padding: 6px 8px 10px 8px;
+  padding: 6px 8px 8px 13px;
   font-family: inherit;
   font-size: 16px;
   line-height: 24px;
@@ -206,12 +206,13 @@ body {
 .header-top-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 15px 30px;
   padding-top: 11px;
   padding-bottom: 14px;
 }
 
 .header-title {
+  max-width: 625px;
   min-width: 490px;
   margin: 0 0 0 2px;
   font-size: inherit;
@@ -229,12 +230,14 @@ body {
 .header-address {
   display: flex;
   flex-wrap: wrap;
-  gap: 34px;
+  gap: 15px 34px;
+  max-width: 644px;
   min-width: 399px;
   margin: 0 3px 0 auto;
 }
 
 .header-address-text {
+  max-width: 277px;
   min-width: 191px;
   margin: 0;
   font-style: normal;
@@ -245,6 +248,7 @@ body {
 
 .header-address-phone {
   display: block;
+  max-width: 198px;
   min-width: 188px;
   padding-left: 24px;
   font-style: normal;
@@ -320,7 +324,7 @@ body {
 }
 
 .header-search-wrapper:hover {
-  outline: 1px solid #63a63e;
+  outline: 2px solid #63a63e;
 }
 
 .header-search-icon {
@@ -447,14 +451,10 @@ body {
   background-repeat: no-repeat;
 }
 
-.personal-account-login {
-  padding: 22px 29px 35px 26px;
-}
-
 .personal-account-dropdown {
   display: none;
   position: absolute;
-  top: 13px;
+  top: 11px;
   right: 3px;
   width: 360px;
   color: #000000;
@@ -462,6 +462,11 @@ body {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
   border-radius: 2px;
   z-index: 2;
+}
+
+.personal-account-login {
+  top: 13px;
+  padding: 22px 29px 35px 27px;
 }
 
 .personal-account-login-wrapper:focus-within .personal-account-current {
@@ -480,7 +485,7 @@ body {
 
 .personal-account-title {
   width: 285px;
-  margin: 0 0 43px 0;
+  margin: 0 0 47px 5px;
   font-weight: 700;
   font-size: 24px;
   line-height: 30px;
@@ -511,16 +516,15 @@ body {
 .personal-account-form {
   display: flex;
   flex-direction: column;
-
 }
 
 .personal-account-label {
   width: 100%;
-  margin: 0 0 7px 0;
+  margin: 0 0 7px 5px;
 }
 
 .personal-account-label:last-of-type {
-  margin-bottom: 12px;
+  margin-bottom: 13px;
 }
 
 .personal-account-wrapper {
@@ -528,10 +532,16 @@ body {
   flex-wrap: wrap;
   gap: 13px;
   margin-bottom: 38px;
+  margin-left: 5px;
 }
 
 .personal-account-checkbox {
   width: 149px;
+}
+
+.personal-account-checkbox .control-mark-checkbox {
+  width: 20px;
+  height: 20px;
 }
 
 .personal-account-checkbox .control-label {
@@ -566,27 +576,67 @@ body {
 }
 
 .personal-account-button {
+  justify-content: flex-start;
   width: 145px;
+  padding-left: 25px;
+}
+
+.personal-account-button::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  margin-right: 16px;
+  background-image: url("../images/icons/enter-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .personal-account-registration {
   width: 145px;
 }
 
+.personal-account-success {
+  padding: 22px 53px 33px 31px;
+}
+
+.personal-account-success-title {
+  margin-bottom: 35px;
+  line-height: 31px;
+}
+
 .personal-account-success-link {
+  display: block;
+  margin: 0 0 23px 0;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-decoration: none;
   color: #3D546F;
+}
+
+.personal-account-success-link:hover {
+  opacity: 0.6;
+}
+
+.personal-account-success-link:active {
+  opacity: 0.3;
+}
+
+.personal-account-success-deauthorization {
+  min-width: 145px;
+}
+
+.personal-account-success-deauthorization:not(:last-of-type) {
+  margin-bottom: 10px;
 }
 
 .personal-account-profile {
   display: inline-flex;
   max-width: 320px;
   margin-right: 10px;
-  padding: 11px 11px 11px 18px;
+  padding: 11px 6px 11px 18px;
   color: #f1f5f7;
   text-decoration: none;
 }
@@ -616,6 +666,7 @@ body {
   display: inline-flex;
   width: 18px;
   height: 45px;
+  margin-left: 3px;
   background-image: url("../images/icons/enter-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -681,12 +732,12 @@ body {
 .user-navigation {
   display: flex;
   flex-wrap: wrap;
-  gap: 22px;
+  gap: 20px;
   justify-content: flex-end;
   min-width: 120px;
   max-width: 196px;
   margin: 0 0 0 auto;
-  padding: 10px 28px 10px 0;
+  padding: 11px 25px 10px 0;
   list-style-type: none;
 }
 
@@ -700,6 +751,7 @@ body {
   content: "";
   width: 18px;
   height: 18px;
+  margin-right: 3px;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0.6;
@@ -722,6 +774,8 @@ body {
 }
 
 .user-navigation-link:after {
+  display: none;
+  padding-left: 5px;
   font-weight: 700;
   font-size: 14px;
   line-height: 18px;
@@ -733,17 +787,25 @@ body {
 
 .user-navigation-favorites:after {
   content: attr(data-favorites-counter);
-  padding-left: 8px;
+  margin-right: 2px;
+}
+
+.user-navigation-favorites[data-favorites-counter]:not([data-favorites-counter=""]):after {
+  display: block;
 }
 
 .user-navigation-cart:after {
   content: attr(data-cart-counter);
-  padding-left: 6px;
+  margin-right: 3px;
+}
+
+.user-navigation-cart[data-cart-counter]:not([data-cart-counter=""]):after {
+  display: block;
 }
 
 .order-button {
   width: 170px;
-  margin: 10px 4px 10px 0;
+  margin: 10px 2px 10px 0;
 }
 
 .main-index {

@@ -47,7 +47,7 @@
         </form>
         <!-- Если посетитель авторизован, переместите класс current c div.personal-account-login-wrapper на div.personal-account-active-->
         <!-- tabindex="0" добавлен для корректной работы в Safari -->
-        <div class="personal-account-login-wrapper" tabindex="0">
+        <div class="personal-account-login-wrapper current" tabindex="0">
           <!-- tabindex="-1" добавлен для корректной работы в Safari -->
           <button class="personal-account-login-button" type="button" tabindex="-1">Войти</button>
           <section class="personal-account-dropdown personal-account-login personal-account-current">
@@ -88,7 +88,7 @@
           </section>
           <!-- Для показа выпадающего блока с приветствием после успешной регистрации переместите класс personal-account-current с section.personal-account-login на section.personal-account-success -->
           <section class="personal-account-dropdown personal-account-success">
-            <h2 class="personal-account-title">Здравствуйте,<br>Равшан Джамшутович</h2>
+            <h2 class="personal-account-title personal-account-success-title">Здравствуйте,<br>Равшан Джамшутович</h2>
             <button class="personal-account-success-close close-button">
               <span class="visually-hidden">Закрыть.</span>
             </button>
@@ -97,7 +97,7 @@
             <a class="personal-account-success-deauthorization button button-additional" href="#">Выйти</a>
           </section>
         </div>
-        <div class="personal-account-active  current">
+        <div class="personal-account-active">
           <a class="personal-account-profile" href="#">Равшан Джамшутович</a>
           <a class="personal-account-deauthorization" href="#">
             <span class="visually-hidden">Перейти на страницу деавторизации.</span>
@@ -134,12 +134,14 @@
         </nav>
         <ul class="user-navigation">
           <li class="user-navigation-item">
-            <a class="user-navigation-link user-navigation-favorites" href="#" data-favorites-counter="12">
+            <!-- Для добавления количества товаров используйте атрибут data-favorites-counter-->
+            <a class="user-navigation-link user-navigation-favorites" href="#" data-favorites-counter="">
               <span class="visually-hidden">Избранное</span>
             </a>
           </li>
           <li class="user-navigation-item">
-            <a class="user-navigation-link user-navigation-cart" href="#" data-cart-counter="3">
+            <!-- Для добавления количества товаров используйте атрибут data-cart-counter-->
+            <a class="user-navigation-link user-navigation-cart" href="#" data-cart-counter="">
               <span class="visually-hidden">Корзина</span>
             </a>
           </li>
