@@ -991,7 +991,7 @@ body {
   gap: 5px;
   position: relative;
   min-height: 390px;
-  padding: 50px 50px 40px 50px;
+  padding: 50px 50px 220px 50px;
 }
 
 .gallery-item::after {
@@ -1040,9 +1040,10 @@ body {
 }
 
 .gallery-link {
-  position: relative;
-  z-index: 1;
-  margin-top: 130px;
+  position: absolute;
+  z-index: 2;
+  left: 50px;
+  bottom: 40px;
   padding: 13px 23px 14px 23px;
 }
 
