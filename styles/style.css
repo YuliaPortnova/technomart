@@ -207,14 +207,14 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 15px 30px;
-  padding-top: 11px;
-  padding-bottom: 14px;
+  padding-top: 2px;
+  padding-bottom: 4px;
 }
 
 .header-title {
   max-width: 625px;
   min-width: 490px;
-  margin: 0 0 0 2px;
+  margin: 10px 0 0 2px;
   font-size: inherit;
   font-weight: 400;
   line-height: 18px;
@@ -239,7 +239,7 @@ body {
 .header-address-text {
   max-width: 277px;
   min-width: 191px;
-  margin: 0;
+  margin: 10px 0 0 0;
   font-style: normal;
   font-size: 14px;
   line-height: 18px;
@@ -248,15 +248,14 @@ body {
 
 .header-address-phone {
   display: block;
-  max-width: 198px;
-  min-width: 188px;
-  padding-left: 24px;
+  width: 198px;
+  padding: 10px 0 10px 24px;
   font-style: normal;
   font-weight: 700;
   color: #293449;
   background-image: url("../images/icons/phone-icon.svg");
   background-repeat: no-repeat;
-  background-position: left top 2px;
+  background-position: left top 10px;
   line-height: 18px;
   text-transform: uppercase;
   text-decoration: none;
@@ -269,16 +268,6 @@ body {
 
 .header-address-phone:active {
   opacity: 0.3;
-}
-
-.header-address-phone:focus-visible {
-  outline: 1px solid #63a63e;
-}
-
-@supports not selector(:focus-visible) {
-  .header-address-phone:focus {
-    outline: 1px solid #63a63e;
-  }
 }
 
 .header-middle {
@@ -337,6 +326,7 @@ body {
   order: -1;
   padding: 13px 12px 6px 21px;
   flex-grow: 1;
+  cursor: pointer;
 }
 
 .header-search-label-text {
@@ -516,13 +506,14 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   border: none;
+  cursor: pointer;
 }
 
 .close-button:hover {
   opacity: 0.7;
 }
 
-.close-button:focus {
+.close-button:active {
   opacity: 0.3;
 }
 
@@ -530,6 +521,9 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+/* Цвет placeholder полей ввода логина и пароля взят из стайлгайда (не из макета),
+так как в техническом задании указано, что при расхождении стайлгайд имеет наивысший приоритет */
 
 .personal-account-label {
   width: 100%;
@@ -960,7 +954,7 @@ body {
   gap: 5px;
   position: relative;
   min-height: 390px;
-  padding: 50px 500px 40px 50px;
+  padding: 50px 50px 40px 50px;
 }
 
 .gallery-item::after {
@@ -1064,12 +1058,33 @@ body {
 }
 
 .gallery-pagination-button {
+  position: relative;
   width: 8px;
   height: 8px;
   padding: 0;
   border: none;
   border-radius: 50%;
   background-color: rgba(255, 209, 128, 0.8);
+  cursor: pointer;
+}
+
+.gallery-pagination-button::before {
+  position: absolute;
+  display: block;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  content: "";
+  width: 12px;
+  height: 30px;
+}
+
+.gallery-pagination-button:hover {
+  background-color: #f1f5f7;
+}
+
+.gallery-pagination-button:active {
+  opacity: 0.5;
 }
 
 .gallery-pagination-button-current {
@@ -1524,7 +1539,7 @@ body {
 .product-item:focus-within .product-button {
   opacity: 1;
   pointer-events: all;
-  z-index: 2;
+  z-index: 3;
 }
 
 .product-button:not(:last-of-type) {
@@ -1580,10 +1595,10 @@ body {
 .product-price::after {
   content: "";
   position: absolute;
-  top: 5px;
+  top: 6px;
   right: -12px;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   border-radius: 4px;
   background-color: #ee3643;
   transform: rotate(45deg);

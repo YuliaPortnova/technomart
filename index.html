@@ -7,8 +7,8 @@
   <link rel="stylesheet" href="styles/style.css">
   <title>Техномарт. Учебный проект.</title>
   <meta name="description" content="Строительные материалы и инструменты для ремонта">
-  <!-- <link rel="icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png"> -->
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.png">
 </head>
 
 <body>
@@ -28,8 +28,7 @@
     <div class="header-middle">
       <div class="container header-middle-wrapper">
         <a class="logo-technomart-link" href="#">
-          <img src="images/technomart-logo.svg" width="108" height="18"
-            alt="Логотип интернет-магазина Техномарт.">
+          <img src="images/technomart-logo.svg" width="108" height="18" alt="Логотип интернет-магазина Техномарт.">
         </a>
         <form class="header-search" action="https://echo.htmlacademy.ru/" method="get">
           <label class="header-search-wrapper">
@@ -52,7 +51,7 @@
           <button class="personal-account-login-button" type="button" tabindex="-1">Войти</button>
           <section class="personal-account-dropdown personal-account-login personal-account-current">
             <h2 class="personal-account-title">Личный кабинет</h2>
-            <button class="personal-account-login-close close-button">
+            <button class="personal-account-login-close close-button" type="button">
               <span class="visually-hidden">Закрыть форму входа.</span>
             </button>
             <form class="personal-account-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -64,18 +63,19 @@
               <label class="personal-account-label">
                 <span class="visually-hidden">Введите ваш пароль.</span>
                 <!-- Для вывода состояния "Ошибка" добавьте тегу input класс error -->
-                <input class="personal-account-password-input input" type="password" name="password" placeholder="Пароль"
-                  required>
+                <input class="personal-account-password-input input" type="password" name="password"
+                  placeholder="Пароль" required>
               </label>
               <div class="personal-account-wrapper">
                 <label class="personal-account-checkbox filter-control">
-                  <input class="checkbox-input visually-hidden" type="checkbox" name="keep-logged"
-                    checked>
-                    <span class="control-mark-checkbox">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z"/>
-                      </svg>
-                    </span>
+                  <input class="checkbox-input visually-hidden" type="checkbox" name="keep-logged" checked>
+                  <span class="control-mark-checkbox">
+                    <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z" />
+                    </svg>
+                  </span>
                   <span class="control-label">Запомнить меня</span>
                 </label>
                 <a class="personal-account-recover-password" href="#">Забыл пароль</a>
@@ -136,13 +136,13 @@
           <li class="user-navigation-item">
             <!-- Для добавления количества товаров используйте атрибут data-favorites-counter-->
             <a class="user-navigation-link user-navigation-favorites" href="#" data-favorites-counter="">
-              <span class="visually-hidden">Избранное</span>
+              <span class="visually-hidden">Избранное.</span>
             </a>
           </li>
           <li class="user-navigation-item">
             <!-- Для добавления количества товаров используйте атрибут data-cart-counter-->
             <a class="user-navigation-link user-navigation-cart" href="#" data-cart-counter="">
-              <span class="visually-hidden">Корзина</span>
+              <span class="visually-hidden">Корзина.</span>
             </a>
           </li>
         </ul>
@@ -174,6 +174,14 @@
         <div class="gallery-offers-wrapper">
           <section class="gallery">
             <h2 class="visually-hidden">Популярные товары.</h2>
+            <div class="gallery-controls">
+              <button class="gallery-button gallery-prev" type="button">
+                <span class="visually-hidden">Предыдущий слайд.</span>
+              </button>
+              <button class="gallery-button gallery-next" type="button">
+                <span class="visually-hidden">Следующий слайд.</span>
+              </button>
+            </div>
             <ul class="gallery-list">
               <!-- Для переключения слайдов добавьте класс gallery-item-current нужному gallery-item-->
               <li class="gallery-item gallery-item-current">
@@ -190,15 +198,6 @@
                 <a class="gallery-link button button-red" href="#">Открыть каталог</a>
               </li>
             </ul>
-            <div class="gallery-controls">
-              <button class="gallery-button gallery-prev" type="button">
-                <span class="visually-hidden">Предыдущий слайд.</span>
-              </button>
-              <button class="gallery-button gallery-next" type="button">
-                <span class="visually-hidden">Следующий слайд.</span>
-              </button>
-            </div>
-
             <ul class="gallery-pagination">
               <li class="gallery-pagination-item">
                 <button class="gallery-pagination-button gallery-pagination-button-current" type="button">
@@ -272,8 +271,10 @@
                     <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Bosch"
                       checked>
                     <span class="control-mark-checkbox">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z"/>
+                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true"
+                        focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z" />
                       </svg>
                     </span>
                     <span class="control-label">BOSCH</span>
@@ -283,8 +284,10 @@
                   <label class="filter-control">
                     <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Interskol">
                     <span class="control-mark-checkbox">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z"/>
+                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true"
+                        focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z" />
                       </svg>
                     </span>
                     <span class="control-label">ИНТЕРСКОЛ</span>
@@ -294,11 +297,13 @@
                   <label class="filter-control">
                     <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Makita"
                       checked>
-                      <span class="control-mark-checkbox">
-                        <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z"/>
-                        </svg>
-                      </span>
+                    <span class="control-mark-checkbox">
+                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true"
+                        focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z" />
+                      </svg>
+                    </span>
                     <span class="control-label">MAKIta</span>
                   </label>
                 </li>
@@ -306,8 +311,10 @@
                   <label class="filter-control">
                     <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Dewalt">
                     <span class="control-mark-checkbox">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z"/>
+                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true"
+                        focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z" />
                       </svg>
                     </span>
                     <span class="control-label">Dewalt</span>
@@ -317,8 +324,10 @@
                   <label class="filter-control">
                     <input class="checkbox-input visually-hidden" type="checkbox" name="companies" value="Hitachi">
                     <span class="control-mark-checkbox">
-                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true" focusable="false"  xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z"/>
+                      <svg width="9" height="7" viewBox="0 0 9 7" fill="currentColor" aria-hidden="true"
+                        focusable="false" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.544 4.21976L7.64801 0L9 1.39012L3.544 7L0 3.35605L1.35199 1.96593L3.544 4.21976Z" />
                       </svg>
                     </span>
                     <span class="control-label">Hitachi</span>
@@ -361,7 +370,8 @@
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <s class="product-price-without-discount">22500 ₽</s>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item" tabindex="0">
@@ -371,7 +381,8 @@
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <s class="product-price-without-discount">22500 ₽</s>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item new" tabindex="0">
@@ -380,7 +391,8 @@
                 </div>
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item new" tabindex="0">
@@ -389,7 +401,8 @@
                 </div>
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item new" tabindex="0">
@@ -398,7 +411,8 @@
                 </div>
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item new" tabindex="0">
@@ -408,7 +422,8 @@
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <s class="product-price-without-discount">22500 ₽</s>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item new" tabindex="0">
@@ -418,7 +433,8 @@
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <s class="product-price-without-discount">22500 ₽</s>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item" tabindex="0">
@@ -428,7 +444,8 @@
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <s class="product-price-without-discount">22500 ₽</s>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
               <li class="product-item new" tabindex="0">
@@ -437,7 +454,8 @@
                 </div>
                 <h3 class="product-title">Перфоратор BOSCH BFG&nbsp;3000</h3>
                 <button class="button button-green product-button-order product-button" type="button">Купить</button>
-                <button class="button button-additional product-button-favorites product-button" type="button">В закладки</button>
+                <button class="button button-additional product-button-favorites product-button" type="button">В
+                  закладки</button>
                 <a class="product-price" href="#">15500 ₽</a>
               </li>
             </ul>
@@ -503,7 +521,8 @@
           <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис:</p>
           <a class="contacts-map-link" href="https://goo.gl/maps/5hcZCnF25ZUQ96pW9" target="_blank"
             rel="nofollow noopener">
-            <img class="contacts-map" src="images/map.png" width="500" height="347" alt="Большая Конюшенная улица, 19/8.">
+            <img class="contacts-map" src="images/map.png" width="500" height="347"
+              alt="Большая Конюшенная улица, 19/8.">
           </a>
         </section>
       </div>
@@ -516,8 +535,7 @@
       <div class="container footer-top-wrapper">
         <div class="footer-left-column">
           <a class="footer-logo logo-technomart-link" href="#">
-            <img src="images/technomart-logo.svg" width="108" height="18"
-            alt="Логотип интернет-магазина Техномарт.">
+            <img src="images/technomart-logo.svg" width="108" height="18" alt="Логотип интернет-магазина Техномарт.">
           </a>
           <address class="footer-address">
             <p class="footer-address-text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
@@ -536,7 +554,7 @@
             </li>
             <li class="socials-item">
               <a class="socials-link socials-vsco" href="#">
-                <span class="visually-hidden">Мы в VSCO</span>
+                <span class="visually-hidden">Мы в VSCO.</span>
               </a>
             </li>
           </ul>
@@ -555,7 +573,7 @@
                 <input class="subscribe-input" type="email" name="email" placeholder="email@example.com" required>
               </label>
               <button class="subscribe-button" type="submit">
-                <span class="visually-hidden">Отправить</span>
+                <span class="visually-hidden">Отправить.</span>
               </button>
             </form>
           </section>
