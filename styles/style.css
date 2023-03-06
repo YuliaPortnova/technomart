@@ -212,7 +212,7 @@ body {
 }
 
 .header-title {
-  max-width: 625px;
+  max-width: 620px;
   min-width: 490px;
   margin: 10px 0 0 2px;
   font-size: inherit;
@@ -237,7 +237,7 @@ body {
 }
 
 .header-address-text {
-  max-width: 277px;
+  max-width: 282px;
   min-width: 191px;
   margin: 10px 0 0 0;
   font-style: normal;
@@ -248,7 +248,7 @@ body {
 
 .header-address-phone {
   display: block;
-  width: 198px;
+  width: 199px;
   padding: 10px 0 10px 24px;
   font-style: normal;
   font-weight: 700;
@@ -1444,7 +1444,8 @@ body {
   background-color: transparent;
   border: 1px solid #3d546f;
   border-radius: 2px;
-  appearance: none;
+  -webkit-appearance: none;
+          appearance: none;
   background-image: url("../images/icons/arrow-down-icon.svg");
   background-repeat: no-repeat;
   background-position: right 11px center;
@@ -1483,7 +1484,7 @@ body {
 
 .product-item:hover,
 .product-item:focus-within {
-  filter: drop-shadow(0 4px 13px rgba(0, 0, 0, 0.25));
+  box-shadow: 0 4px 13px 0 rgba(0, 0, 0, 0.25);
 }
 
 .product-item.new::before {
