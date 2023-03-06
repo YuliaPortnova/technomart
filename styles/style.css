@@ -1044,6 +1044,7 @@ body {
   z-index: 2;
   left: 50px;
   bottom: 40px;
+  max-width: 660px;
   padding: 13px 23px 14px 23px;
 }
 
