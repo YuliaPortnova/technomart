@@ -1521,7 +1521,7 @@ body {
 .products-list {
   display: grid;
   grid-template-columns: repeat(3, 270px);
-  gap: 28px 33px;
+  gap: 26px 33px;
   margin: 0 0 32px 0;
   padding: 0;
   list-style-type: none;
